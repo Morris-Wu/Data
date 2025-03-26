@@ -16,6 +16,7 @@ load_dotenv()
 
 async def process_chunk(chunk, start_idx, total_records, model_client, termination_condition):
     """
+    HW1
     處理單一批次資料：
       - 將該批次資料轉成 dict 格式
       - 組出提示，要求各代理人根據該批次資料進行分析，

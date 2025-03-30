@@ -16,7 +16,7 @@ load_dotenv()
 
 async def process_chunk(chunk, start_idx, total_records, model_client, termination_condition):
     """
-    HW1
+    HW1 change the condition
     處理單一批次資料：
       - 將該批次資料轉成 dict 格式
       - 組出提示，要求各代理人根據該批次資料進行分析，
@@ -26,7 +26,8 @@ async def process_chunk(chunk, start_idx, total_records, model_client, terminati
         並將搜尋結果納入建議中。
       - 收集所有回覆訊息並返回。
     """
-    # 將資料轉成 dict 格式
+    # 將資料轉成 dict 格式 
+    # HW1 change the condition
     chunk_data = chunk.to_dict(orient='records')
     prompt = (
         f"目前正在處理第 {start_idx} 至 {start_idx + len(chunk) - 1} 筆資料（共 {total_records} 筆）。\n"
@@ -81,6 +82,7 @@ async def main():
     termination_condition = TextMentionTermination("exit")
     
     # 使用 pandas 以 chunksize 方式讀取 CSV 檔案
+    # HW1 change the condition
     csv_file_path = "2024 Chinese Professional Baseball League Batting Leaders.csv"
     chunk_size = 1000
     chunks = list(pd.read_csv(csv_file_path, chunksize=chunk_size))

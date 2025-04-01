@@ -17,5 +17,8 @@ Change the data
 # HW3
  Post AI
 
+ https://github.com/Morris-Wu/Data/blob/main/postAI.py 
  
+# HW3
+![螢幕擷取畫面 2025-04-01 164342](https://github.com/user-attachments/assets/e091ad1f-1a37-4097-bc69-a66194e331d6)
 

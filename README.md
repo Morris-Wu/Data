@@ -9,7 +9,7 @@ Change the condition
 # HW2
 Change the data
 
-https://github.com/Morris-Wu/Data/blob/main/DRai.py
+[DRai.py](https://github.com/Morris-Wu/Data/blob/main/DRai.py)
 
 # HW2
 ![螢幕擷取畫面 2025-04-01 113113](https://github.com/user-attachments/assets/2f661146-59a8-4642-a446-25ca8896e7d5)

@@ -44,3 +44,5 @@
 
 
 # 專案第二次報告影片
+
+[CPBL報表自動化系統](https://youtu.be/UdvNhKpL6V8)

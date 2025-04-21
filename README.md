@@ -13,13 +13,14 @@
 🛠 技術架構與模組
 
 模組名稱	功能簡述
-[instruction_parser.py]	分析使用者輸入指令，自動辨識報表類型（打者/投手）、年份範圍、球隊等資訊
 
-[data_loader.py]	根據需求讀取並整合 1990～2023 年的歷史 CSV 數據檔，並支援依隊伍與年份篩選
+[instruction_parser.py](https://github.com/Morris-Wu/Data/blob/Automatic-generation-system-for-CPBL-player-reports/instruction_parser.py)	分析使用者輸入指令，自動辨識報表類型（打者/投手）、年份範圍、球隊等資訊
 
-[report_generator.py]	以 FPDF 建構支援中文字型的 PDF 檔，並自動調整欄寬、標題格式、頁碼、排版細節等
+[data_loader.py](https://github.com/Morris-Wu/Data/blob/Automatic-generation-system-for-CPBL-player-reports/data_loader.py)	根據需求讀取並整合 1990～2023 年的歷史 CSV 數據檔，並支援依隊伍與年份篩選
 
-[main.py]	主控流程，整合指令解析、資料載入與報表輸出，提供終端介面互動
+[report_generator.py](https://github.com/Morris-Wu/Data/blob/Automatic-generation-system-for-CPBL-player-reports/report_generator.py)	以 FPDF 建構支援中文字型的 PDF 檔，並自動調整欄寬、標題格式、頁碼、排版細節等
+
+[main.py](https://github.com/Morris-Wu/Data/blob/Automatic-generation-system-for-CPBL-player-reports/main.py)	主控流程，整合指令解析、資料載入與報表輸出，提供終端介面互動
 
 💡 核心特色與功能
 

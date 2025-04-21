@@ -1,21 +1,29 @@
-import os
-from dotenv import load_dotenv
-import asyncio
-from autogen_core.models import UserMessage
-from autogen_ext.models.openai import OpenAIChatCompletionClient
+from data_loader import load_all_data, filter_data
+from report_generator import generate_pdf_report
+from instruction_parser import parse_instruction
 
-# 載入 .env 檔案中的環境變數
-load_dotenv()
+def main():
+    instruction = input("請輸入你的需求（例如：請幫我產生 2010~2015 打者的打擊報表）：\n")
+    params = parse_instruction(instruction)
+    print(f"解析結果：{params}")
 
-async def main():
-    # 從環境變數中讀取金鑰
-    api_key = os.environ.get("GEMINI_API_KEY")
-    model_client = OpenAIChatCompletionClient(
-        model="gemini-1.5-flash-8b",
-        api_key=api_key,
+    if params['action'] != 'generate_report':
+        print("❌ 無法辨識指令，請重新輸入！")
+        return
+
+    data_type = params.get('data_type')
+    df = load_all_data('data', data_type=data_type)
+
+    filtered_df = filter_data(
+        df,
+        team=params.get('team'),
+        year_start=params.get('year_start'),
+        year_end=params.get('year_end')
     )
-    response = await model_client.create([UserMessage(content="What is the capital of France?", source="user")])
-    print("Agent response:", response)
 
-if __name__ == '__main__':
-    asyncio.run(main())
+    generate_pdf_report(filtered_df, title=instruction, data_type=data_type)
+
+if __name__ == "__main__":
+    main()
+
+

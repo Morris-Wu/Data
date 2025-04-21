@@ -14,8 +14,17 @@
  [postAI.py ](https://github.com/Morris-Wu/Data/blob/main/postAI.py)  Post AI
  
 # HW3執行結果圖
-[擷取畫面](https://github.com/user-attachments/assets/e091ad1f-1a37-4097-bc69-a66194e331d6)
+[輸出結果圖](https://github.com/user-attachments/assets/e091ad1f-1a37-4097-bc69-a66194e331d6)
+
+# HW4
+[report_generator.py](https://github.com/Morris-Wu/Data/blob/Automatic-generation-system-for-CPBL-player-reports/report_generator.py) 輸出 PDF 檔
+
+# HW4執行結果圖
+[輸出結果圖](https://github.com/user-attachments/assets/073b2bee-9e9a-4976-bb37-5bbe8a3f1528)
+
 
 # 專案第一次報告影片
 
 [智慧棒球戰術決策輔助系統](https://youtu.be/kXV-F5wvN18)
+
+# 專案第二次報告影片

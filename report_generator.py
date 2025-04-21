@@ -16,12 +16,14 @@ class PDF(FPDF):
         self.set_font('kaiu', '', 16)
         self.set_char_spacing(0)
 
-        # 👉 標題中每個字中間加兩個空格
+        # HW4
+        # 標題中每個字中間加兩個空格
         spaced_title = '  '.join(self.title_text)
         self.cell(0, 10, spaced_title, ln=True, align='C')
         self.ln(10)
 
-        # 👉 每頁上半部畫灰色欄位列
+        # HW4
+        # 每頁上半部畫灰色欄位列
         if self.columns and self.col_widths:
             self.set_font('kaiu', '', 11)
             self.set_fill_color(200, 200, 200)
@@ -39,6 +41,7 @@ def generate_pdf_report(df, title='CPBL 報表', data_type='batting'):
     if not os.path.exists(font_path):
         raise FileNotFoundError(f"❌ 找不到字型檔案：{font_path}")
 
+    # HW4
     # 欄位設定
     if data_type == 'batting':
         columns = ['Name', 'Team Name', 'G', 'PA', 'RBI', 'R', 'H', '1B', '2B', 'HR', 'BB']
@@ -47,6 +50,7 @@ def generate_pdf_report(df, title='CPBL 報表', data_type='batting'):
     
     df = df[columns]
 
+    # HW4
     # 計算欄寬
     pdf_temp = FPDF()
     total_width = pdf_temp.w - 20
@@ -63,12 +67,14 @@ def generate_pdf_report(df, title='CPBL 報表', data_type='batting'):
         else:
             col_widths.append(other_width)
 
+    # HW4
     # 初始化 PDF
     pdf = PDF(font_path=font_path, title=title, columns=columns, col_widths=col_widths)
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
     pdf.set_font('kaiu', '', 11)
 
+    # HW4
     # 資料列
     for _, row in df.iterrows():
         for col, width in zip(columns, col_widths):

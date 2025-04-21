@@ -22,3 +22,11 @@
 # HW4執行結果圖
 [輸出結果圖](https://github.com/user-attachments/assets/073b2bee-9e9a-4976-bb37-5bbe8a3f1528)
 
+# 專案第一次報告影片
+
+[智慧棒球戰術決策輔助系統](https://youtu.be/kXV-F5wvN18)
+
+
+
+# 專案第二次報告影片
+

@@ -32,7 +32,7 @@
 [report.py](https://github.com/Morris-Wu/Data/blob/Morris-Wu-Data-%E5%B0%88%E9%A1%8C/backend/report_generator.py)
 
 # HW5 執行結果圖
-[輸出結果圖](https://github.com/user-attachments/assets/48f5c4b0-331f-49a5-bb0b-ce2d87bc8cb0)
+[輸出結果圖](https://github.com/user-attachments/assets/48f5c4b0-331f-49a5-bb0b-ce2d87bc8cb0)前端畫面
 
 
 # 專案第一次報告影片

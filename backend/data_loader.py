@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-
+#HW5
 def load_all_data(folder_path, data_type='batting'):
     dfs = []
     for year in range(1990, 2024):
@@ -10,7 +10,7 @@ def load_all_data(folder_path, data_type='batting'):
             df['年份'] = year
             dfs.append(df)
     return pd.concat(dfs, ignore_index=True)
-
+#HW5
 def filter_data(df, team=None, year_start=None, year_end=None):
     if team:
         df = df[df['Team Name'] == team]

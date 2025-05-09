@@ -1,7 +1,7 @@
 from fpdf import FPDF
 from datetime import datetime
 import os
-
+#HW5
 class PDF(FPDF):
     def __init__(self, font_path, title='', columns=None, col_widths=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -11,7 +11,7 @@ class PDF(FPDF):
         self.col_widths = col_widths or []
         self.add_font('kaiu', '', self.font_path, uni=True)
         self.set_font('kaiu', '', 12)
-
+    #HW5
     def header(self):
         self.set_font('kaiu', '', 16)
         spaced_title = '  '.join(self.title_text)
@@ -23,12 +23,12 @@ class PDF(FPDF):
             for col, width in zip(self.columns, self.col_widths):
                 self.cell(width, 10, str(col), border=1, align='C', fill=True)
             self.ln()
-
+    #HW5
     def footer(self):
         self.set_y(-15)
         self.set_font('kaiu', '', 9)
         self.cell(0, 10, f'第 {self.page_no()} 頁', align='C')
-
+#HW5
 def generate_pdf_report(df, title='CPBL 報表', data_type='batting'):
     font_path = r'C:\Windows\Fonts\kaiu.ttf'
     if not os.path.exists(font_path):

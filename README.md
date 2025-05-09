@@ -27,7 +27,7 @@
 
 [data_loader.py](https://github.com/Morris-Wu/Data/blob/Morris-Wu-Data-%E5%B0%88%E9%A1%8C/backend/data_loader.py)
 
-[instruction_parser.py](https://github.com/Morris-Wu/Data/blob/Morris-Wu-Data-%E5%B0%88%E9%A1%8C/backend/instruction_parser.py))
+[instruction_parser.py](https://github.com/Morris-Wu/Data/blob/Morris-Wu-Data-%E5%B0%88%E9%A1%8C/backend/instruction_parser.py)
 
 [report.py](https://github.com/Morris-Wu/Data/blob/Morris-Wu-Data-%E5%B0%88%E9%A1%8C/backend/report_generator.py)
 

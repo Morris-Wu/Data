@@ -1,5 +1,6 @@
 import re
 
+# HW4
 def parse_instruction(instruction):
     """
     解析使用者輸入的指令，抽取報表產生相關參數：
@@ -21,17 +22,17 @@ def parse_instruction(instruction):
         'data_type': 'batting'  # 預設為打者資料
     }
 
-    # 解析年限範圍，例如：2010~2020 或 2005-2015
+    # 解析年限範圍，例如：2010~2020 或 2005-2015 # HW4
     year_range = re.search(r'(\d{4})[~\-](\d{4})', instruction)
     if year_range:
         result['year_start'] = int(year_range.group(1))
         result['year_end'] = int(year_range.group(2))
 
-    # 判斷資料類型，若包含「投手」關鍵字則設為 pitching
+    # 判斷資料類型，若包含「投手」關鍵字則設為 pitching  # HW4
     if '投手' in instruction:
         result['data_type'] = 'pitching'
 
-    # 解析指定球隊名稱，支援六支中職球隊關鍵字
+    # 解析指定球隊名稱，支援六支中職球隊關鍵字 # HW4
     team_match = re.search(r'(統一|味全|樂天|中信|富邦|兄弟)', instruction)
     if team_match:
         result['team'] = team_match.group(1)

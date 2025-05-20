@@ -35,3 +35,9 @@
 
 [智慧棒球戰術決策輔助系統](https://youtu.be/kXV-F5wvN18)
 
+# 專案第二次報告影片
+[CPBL報表自動化系統](https://youtu.be/UdvNhKpL6V8)
+
+# 專案發表影片
+[CPBL報表自動化系統](https://youtu.be/VzXyeKYdlBY)
+
